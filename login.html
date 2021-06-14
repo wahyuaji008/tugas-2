@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		* {
+			font-family: sans-serif;
+			margin-left: 5px;
+		}
+	</style>
+	<title>Kalkulator</title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<h2>L O G I N</h2><br>
+	<form>
+		<label>Username</label><br>
+		<input type="text"><br><br>
+		<label>Password</label><br>
+		<input type="password" class="password"><br>
+		<input type="checkbox" class="showpass"> Tampilkan Password<br><br>
+		<button>Login</button>
+	</form>
+	<script>
+		$(document).ready(function(){
+			$('.showpass').click(function(){
+				if($(this).is(':checked')){
+					$('.password').attr('type', 'text');
+				}else{
+					$('.password').attr('type', 'password');
+				}
+			});
+		});
+	</script>
+</body>
+</html>
